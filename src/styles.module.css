@@ -1,9 +1,67 @@
-/* add css module styles here (optional) */
-
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+/* button styles
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+:root {
+  --danger: #f05454;
+  --primary: #30475e;
+  --warning: #ffd56b;
+  --success: #aee6e6;
+  --white: #f5f4f4;
+  --dark: #222831;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+.btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  border-radius: 100px;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+}
+.btn-success {
+  background-color: var(--success);
+  color: white;
+}
+.btn-warning {
+  background-color: var(--warning);
+  color: black;
+}
+.btn-light {
+  color: black;
+  border: black 0.2em solid;
+  background-color: transparent;
+}
+.btn-dark {
+  background-color: var(--dark);
+  color: white;
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-medium {
+  padding: 0.5rem 3rem 0.5rem 3rem;
+}
+.btn-large {
+  padding: 0.7rem 3.5rem 0.7rem 3.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+}
+.btn-small {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  font-size: 0.8rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+} */

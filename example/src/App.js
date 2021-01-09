@@ -1,10 +1,21 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-mini-uis'
-import 'react-mini-uis/dist/index.css'
+import { Button, Typography } from 'react-mini-uis'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div>
+      <Button theme='dark' size='small'>
+        Log in
+      </Button>
+      <Typography component='h1'>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+        dignissimos voluptatem ullam inventore modi sit rem error perferendis
+        repellat vel. Quam nobis porro quae quibusdam aperiam voluptas minus, et
+        pariatur!
+      </Typography>
+    </div>
+  )
 }
 
 export default App

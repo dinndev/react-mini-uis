@@ -1,8 +1,8 @@
 # react-mini-uis
 
-> Made with create-react-library
+# What is this ?
 
-[![NPM](https://img.shields.io/npm/v/react-mini-uis.svg)](https://www.npmjs.com/package/react-mini-uis) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+Light easily applied ui!
 
 ## Install
 
@@ -13,14 +13,11 @@ npm install --save react-mini-uis
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'react-mini-uis'
-import 'react-mini-uis/dist/index.css'
+import { Button } from 'react-mini-uis'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Button theme="Primary" size="Small"> Sign Up <Button>
   }
 }
 ```
