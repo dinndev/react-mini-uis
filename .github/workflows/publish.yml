@@ -1,13 +1,14 @@
 name: '🚀 release'
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
 
 jobs:
   release:
     name: 🚀 release
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: 📚 checkout
         uses: actions/checkout@v2.1.1
