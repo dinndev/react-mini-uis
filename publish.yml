@@ -17,4 +17,4 @@ jobs:
       - run: npm test
       - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ 8376462b-fdfc-48e9-9433-ffd07c30b1f0 }}
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
