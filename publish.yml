@@ -1,0 +1,20 @@
+- name: NPM Publish
+  uses: JS-DevTools/npm-publish@v1
+  
+  
+  
+  on: push
+
+jobs:
+  publish:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: npm install
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ 8376462b-fdfc-48e9-9433-ffd07c30b1f0 }}
