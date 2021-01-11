@@ -14,13 +14,17 @@ export function Button({ children, size, theme }) {
       case 'DANGER':
         return 'background-color: #f05454; color: white;'
       case 'WARNING':
-        return 'background-color: #ffd56b; color: black;;'
+        return 'background-color: #ffd56b; color: black;'
+      case 'TRANSPARENT':
+        return 'background-color: transparent; color: black;'
       default:
         return 'background-color: #11698e; color:white;'
     }
   }
   const handleSizes = (size) => {
     switch (size) {
+      case 'XSMALL':
+        return 'padding: 0.4rem 1rem 0.4rem 1rem; font-size: 0.8rem;'
       case 'SMALL':
         return 'padding: 0.5rem 1.5rem 0.5rem 1.5rem; font-size: 0.8rem;'
       case 'MEDIUM':
@@ -35,6 +39,7 @@ export function Button({ children, size, theme }) {
   const StyleButton = styled.button`
     ${({ theme }) => handleTheme(theme.toUpperCase())}
     ${({ size }) => handleSizes(size.toUpperCase())}
+    font-size: 0.5rem;
     border: none;
     cursor: pointer;
     outline: none;
@@ -47,15 +52,15 @@ export function Button({ children, size, theme }) {
       transform: translateY(-3px);
     }
   `
-  Button.propType = {
-    size: propType.string.isRequired,
-    theme: propType.string.isRequired
-  }
   return (
     <StyleButton size={size} theme={theme}>
       {children}
     </StyleButton>
   )
+}
+Button.propType = {
+  size: propType.string.isRequired,
+  theme: propType.string.isRequired
 }
 
 export default Button

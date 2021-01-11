@@ -2,15 +2,44 @@ import React from 'react'
 import propType from 'prop-types'
 import styled from 'styled-components'
 
-export function Typography({ component, children }) {
+export function Typography({
+  component = 'Paragraph',
+  children,
+  size = 'small'
+}) {
+  const handleSizes = (size) => {
+    switch (size) {
+      case 'SMALL':
+        return 'font-size: 0.9rem'
+      case 'MEDIUM':
+        return 'font-size: 1.5rem;'
+      case 'LARGE':
+        return 'font-size: 2rem;'
+      default:
+        return 'font-size: 1rem;'
+    }
+  }
   const Paragraph = styled.p`
-    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
-    font-family: 'Source Sans Pro', sans-serif;
-    max-width: 70%;
-    color: #272343;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@500&display=swap');
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    margin: 0;
+    color: gray;
+    text-align: left;
+    ${({ size }) => handleSizes(size)}
   `
   const H1 = styled.h1`
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+  `
+  const H3 = styled.h3`
+    margin: 0;
     max-width: 70%;
+    text-align: left;
   `
   const handleTags = (tag) => {
     switch (tag) {
