@@ -22,8 +22,8 @@ jobs:
       - name: "Bump version and push tags"
         uses: anothrNick/github-tag-action@1.26.0
          env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WITH_V: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
       # Run yarn install to install project packages
       - run: npm install
       # yarn build to build the project
