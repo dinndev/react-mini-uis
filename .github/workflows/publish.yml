@@ -10,7 +10,7 @@ on:
 # Job will run on a ubuntu instance
 jobs:
   build:
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
     steps:
       # Checkout the code
       - uses: actions/checkout@v2
