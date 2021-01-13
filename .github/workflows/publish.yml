@@ -4,8 +4,8 @@ name: NPM Publish
 # This action will trigger on every release get created
 on:
   push:
-    branches: 
-        - master
+    branches:
+      - master
 
 # Job will run on a ubuntu instance
 jobs:
@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: "Bump version and push tags"
+      - name: 'Bump version and push tags'
         uses: anothrNick/github-tag-action@1.26.0
-         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           WITH_V: true
       # Run yarn install to install project packages
       - run: npm install
