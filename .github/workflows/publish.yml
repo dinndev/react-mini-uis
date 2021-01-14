@@ -26,12 +26,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm i
       - run: npm test
-      - name: Version and publush to npm
-        uses: bcomnes/npm-bump@v1.0.4
+      - name: Automated Version Bump
+        uses: phips28/gh-action-bump-version@v8.0.18
         with:
-          git_email: jendanielev@gmail.com
-          git_username: ${{ github.actor }}
-          newversion: ${{ github.event.inputs.newversion }}
-          push_version_commit: true # if your prePublishOnly step pushes git commits, you can omit this input or set it to false.
-          github_token: ${{ secrets.GH_TOKEN }} # built in actions token.  Passed tp gh-release if in use.
-          npm_token: ${{ secrets.NPM_AUTH_TOKEN }} # user set secret token generated at npm
+          tag-prefix: ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # built in actions token.  Passed tp gh-release if in use.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # user set secret token generated at npm
