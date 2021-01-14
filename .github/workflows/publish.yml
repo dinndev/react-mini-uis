@@ -1,11 +1,9 @@
 name: Version and Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      newversion:
-        description: 'Semantic Version Bump Type (major minor patch)'
-        required: true
+  push:
+    branches:
+      - master
 
 env:
   node_version: 14
