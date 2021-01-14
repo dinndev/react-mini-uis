@@ -19,16 +19,13 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: 'Bump version and push tags'
-        uses: anothrNick/github-tag-action@1.26.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          WITH_V: true
-      # Run yarn install to install project packages
-      - run: npm install
-      # yarn build to build the project
-      # publish the files to NPM
-      - run: npm publish --access public
-        # for publishing, npm need authorization. We add the NPM token to the environment which will take care of authorization to publish to the package
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+      - name: npm bump
+        uses: bcomnes/npm-bump@v2.0.2
+        with:
+          git_email: jendanielev@gmail.com
+          git_username: ${{ github.actor }}
+          newversion: ${{ github.event.inputs.newversion }}
+          push_version_commit: true # if your prePublishOnly step pushes git commits, you can omit this input or set it to false.
+          github_token: ${{ secrets.GH_TOKEN }} # built in actions token.  Passed tp gh-release if in use.
+          npm_token: ${{ secrets.NPM_AUTH_TOKEN }} # user set secret token generated at npm
+
