@@ -10,7 +10,7 @@ on:
 # Job will run on a ubuntu instance
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       # Checkout the code
       - uses: actions/checkout@v2
@@ -26,6 +26,7 @@ jobs:
           WITH_V: true
       # Run yarn install to install project packages
       - run: npm install
+      # yarn build to build the project
       # publish the files to NPM
       - run: npm publish --access public
         # for publishing, npm need authorization. We add the NPM token to the environment which will take care of authorization to publish to the package
