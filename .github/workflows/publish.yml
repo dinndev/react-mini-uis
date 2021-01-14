@@ -10,7 +10,7 @@ on:
 # Job will run on a ubuntu instance
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       # Checkout the code
       - uses: actions/checkout@v2
@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
+      - run: npm i
       - name: npm bump
         uses: bcomnes/npm-bump@v2.0.2
         with:
