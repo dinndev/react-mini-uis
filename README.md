@@ -21,11 +21,10 @@ class Example extends Component {
   }
 }
 ```
+
 **Example**
 
-![Card Representation](/)
-
-
+![Card Representation](/src/Sample_media/Sample.png)
 
 ## License
 
