@@ -25,6 +25,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           skip-tag: ''
+          minor-wording: 'minor'
+          major-wording: 'major'
+          patch-wording: 'patch'
       # Run yarn install to install project packages
       # yarn build to build the project
       # publish the files to NPM
