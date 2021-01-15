@@ -6,6 +6,7 @@ const Controls = styled.div`
   justify-content: flex-end;
   padding: 10px 20px 10px 20px;
   align-items: start;
+  margin-bottom: 0.5rem;
 `
 
 export function CardControls({ children }) {

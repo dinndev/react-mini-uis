@@ -22,16 +22,19 @@ const App = () => {
           <Typography size='medium' component='title'>
             Portrait
           </Typography>
-          <Typography size='large' component='Paragraph'>
+          <Typography size='small' component='paragraph'>
             A painting, drawing, photograph, or engraving of a person,
             especially one depicting only the face or head and shoulders.
           </Typography>
         </CardContent>
-        {/* <CardControls>
-          <Button size='small' color='dark'>
+        <CardControls>
+          <Button size='xsmall' color='Danger'>
+            S
+          </Button>
+          <Button size='xsmall' color='transparent'>
             Share
           </Button>
-        </CardControls> */}
+        </CardControls>
       </Card>
     </div>
   )

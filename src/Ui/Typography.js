@@ -7,7 +7,7 @@ const handleSizes = (size) => {
     case 'xsmall':
       return 'font-size: 0.7rem'
     case 'small':
-      return 'font-size: 0.9rem'
+      return 'font-size: 1rem'
     case 'medium':
       return 'font-size: 1.1rem;'
     case 'large':
@@ -42,13 +42,13 @@ const H3 = styled.h3`
 `
 
 export function Typography({
-  component = 'Paragraph',
+  component = 'paragraph',
   children,
   size = 'small'
 }) {
   const handleTags = (tag) => {
     switch (tag) {
-      case 'Paragraph':
+      case 'PARAGRAPH':
         return <Paragraph size={size}>{children}</Paragraph>
       case 'TITLE':
         return <H1 size={size}>{children}</H1>
@@ -58,7 +58,7 @@ export function Typography({
         return <Paragraph>{children}</Paragraph>
     }
   }
-  return handleTags(component)
+  return handleTags(component.toUpperCase())
 }
 
 Typography.propType = {
