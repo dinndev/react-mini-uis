@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'README.md'
 
 # Job will run on a ubuntu instance
 jobs:
