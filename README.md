@@ -24,7 +24,7 @@ class Example extends Component {
 
 **Example**
 
-![Card Representation](/src/Sample_media/Sample.png)
+![Card Representation](./src/Sample_media/Sample.png)
 
 ## License
 
