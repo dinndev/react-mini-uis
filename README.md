@@ -2,7 +2,7 @@
 
 # What is this ?
 
-Light easily applied ui!
+create your website with already made UI that can be easily be applied and have a light and cool UI.
 
 ## Install
 
@@ -24,7 +24,8 @@ class Example extends Component {
 
 **Example**
 
-![Card Representation](./src/Sample_media/Sample.png)
+![Card Representation](https://user-images.githubusercontent.com/43803348/164126231-fbe75370-a0aa-4d89-af06-281e499790be.png)
+
 
 ## License
 
